@@ -1,6 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 function NameItem({ name, activeName, setActiveName }) {
+
+    useEffect(() => {
+        if (activeName === name) {
+            console.log(`${activeName} wil graag een biertje bestellen.`)
+        }
+
+    }, [activeName]);
+
   return (
     <li>
       <h3>{name}</h3>

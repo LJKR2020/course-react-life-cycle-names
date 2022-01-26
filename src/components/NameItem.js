@@ -4,7 +4,7 @@ function NameItem({ name, activeName, setActiveName }) {
 
     useEffect(() => {
         if (activeName === name) {
-            console.log(`${activeName} wil graag een biertje bestellen.`)
+            console.log(`${name} wil graag een biertje bestellen.`)
         }
 
     }, [activeName]);
@@ -12,7 +12,7 @@ function NameItem({ name, activeName, setActiveName }) {
   return (
     <li>
       <h3>{name}</h3>
-      <button type="button" onClick={() => setActiveName(activeName=name)}>
+      <button type="button" onClick={() => setActiveName(name)}>
         Geef een rondje!
       </button>
     </li>

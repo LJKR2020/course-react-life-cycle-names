@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import NameItem from './components/NameItem';
 import './App.css';
 
 function App() {
+    const [activeName, setActiveName] = useState("");
+
   return (
     <>
-      <h1>Het laatste rondje is gegeven door: ...</h1>
+      <h1>Het laatste rondje is gegeven door: {activeName}</h1>
       <ul>
-        <NameItem name="Henk" />
-        <NameItem name="Piet" />
-        <NameItem name="Jan" />
+        <NameItem key="henk" name="Henk" activeName={activeName} setActiveName={setActiveName}/>
+        <NameItem key="piet" name="Piet" activeName={activeName} setActiveName={setActiveName}/>
+        <NameItem key="jan" name="Jan" activeName={activeName} setActiveName={setActiveName}/>
       </ul>
     </>
   );
